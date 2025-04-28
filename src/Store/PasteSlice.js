@@ -42,6 +42,7 @@ export const PasteSlice = createSlice({
         resetAllPaste: (state, action) => {
             state.paste_bot = [];
             localStorage.removeItem("paste_bot");
+            toast.success("Reset");
 
 
         },

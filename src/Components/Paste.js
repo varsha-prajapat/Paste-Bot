@@ -26,7 +26,7 @@ const Paste = () => {
     nav(`/pastes/${id}`)
   }
   return (
-    <Container className='vw-100  d-flex  flex-column align-items-center mt-3 '>
+    <Container className='vw-100 vh-100  d-flex  flex-column align-items-center mt-3 '>
       <Row className='w-50  mt-4 p-0 '>
         <Col className='d-flex justify-content-center  '>
           <input type="search"
@@ -57,7 +57,7 @@ const Paste = () => {
                   </div>
                 </Col>
                 <Col >
-                  <div className=' p-2  d-flex justify-content-between '>
+                  <div className=' p-2 m-2  d-flex justify-content-between '>
                     <FaEdit onClick={() => nav(`/?pasteId=${paste?._id}`)} className=" text-light" size={30} />
                     <BiFile onClick={() => View(paste._id)} className='text-light' size={30} />
                     <BiTrash onClick={() => handleDelete(paste._id)} className='text-light' size={30} />

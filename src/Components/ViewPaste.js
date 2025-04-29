@@ -10,7 +10,8 @@ const ViewPaste = () => {
   const allPastes = useSelector((state) => state.paste_bot.paste_bot);
   const paste = allPastes.filter((p) => p._id === id)[0];
   return (
-    <Container className=' vw-100 vh-100  d-flex flex-column align-items-center'>
+    <Container
+      className=' vw-100 vh-100  d-flex flex-column align-items-center'>
       <Row className=' w-50  m-1 ' >
         <Col className='p-0'>
           <input
@@ -22,7 +23,8 @@ const ViewPaste = () => {
           />
         </Col>
       </Row>
-      <Row className=' w-50 bg-dark  d-flex justify-content-center rounded m-2  '>
+      <Row
+        className=' w-50 bg-dark  d-flex justify-content-center rounded m-2  '>
         <Row className=' w-100 rounded '>
           <Col>
             <BiSolidCircle className='text-danger' />

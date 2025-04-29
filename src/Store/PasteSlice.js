@@ -15,7 +15,7 @@ export const PasteSlice = createSlice({
             const paste = action.payload;
             //add a check=?Paste already exist
             const correctpaste = state.paste_bot.filter((p) => p.title.toLowerCase() === paste.title.toLowerCase())
-            if (correctpaste.length == 0 && paste.content.trim() !== "" && paste.title.trim() !== '') {
+            if (correctpaste.length === 0 && paste.content.trim() !== "" && paste.title.trim() !== '') {
                 state.paste_bot.push(paste);
                 localStorage.setItem("paste_bot", JSON.stringify(state.paste_bot));
                 toast.success("Paste Created Succcessfully");
@@ -58,11 +58,9 @@ export const PasteSlice = createSlice({
         },
         changefav: (state, action) => {
             const id = action.payload;
-            console.log("fun", id);
             const index = state.paste_bot.findIndex((item) => item._id === id);
             if (index >= 0) {
                 state.paste_bot[index].fav = !(state.paste_bot[index].fav);
-                console.log(state.paste_bot[index].fav);
                 localStorage.setItem("paste_bot", JSON.stringify(state.paste_bot));
                 toast.success("favourites are change");
             }

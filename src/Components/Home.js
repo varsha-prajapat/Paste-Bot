@@ -31,7 +31,6 @@ const Home = () => {
     }
     if (pasteId) {
       //update
-
       dispatch(updateToPaste(paste));
 
     }
@@ -45,50 +44,51 @@ const Home = () => {
 
   }
   return (
-    <Container className=' vw-100 vh-100  d-flex flex-column align-items-center'>
-      <Row className=' w-50  m-1 ' >
-        <Col className='p-0'>
+    <Container className=' vw-100  vh-100  d-flex flex-column align-items-center'>
+      <Row className=' w-100 mt-2 mb-2 ' >
+        <Col className='w-100 p-0  mb-2   d-flex  justify-content-between '>
           <input
-            className=' w-100 p-1 mt-2 rounded  '
+            className=' w-50 p-1 me-2 rounded  '
             type="text"
             placeholder='Enter title here...'
             value={title}
             onChange={(e) => settitle(e.target.value)}
           />
-        </Col>
-        <Col className='d-flex justify-content-end p-0 m-1'>
           <button
             onClick={createPaste}
             type="button"
-            className='btn btn-primary  mt-2'>
+            className='btn btn-primary'>
             {
               pasteId ? "Update Paste" : "Create My Paste"
             }
-          </button></Col>
+          </button>
+        </Col>
       </Row>
-      <Row className=' w-50 bg-dark  d-flex justify-content-center rounded m-2  '>
-        <Row className=' w-100 rounded '>
-          <Col>
-            <BiSolidCircle className='text-danger' />
-            <BiSolidCircle className='text-warning' />
-            <BiSolidCircle className='text-success' />
-          </Col>
-          <Col className=' d-flex justify-content-end'>
-            <BiCopy
-              onClick={() => {
-                navigator.clipboard.writeText(value);
-                toast.success("copied to clipboard");
-              }} className='text-light mt-2' /></Col>
+      <Row className=' w-100  bg-dark  d-flex justify-content-center rounded '>
+        <Row className='w-100 p-2 m-0 d-flex justify-content-center '>
+          <Row className=' rounded '>
+            <Col>
+              <BiSolidCircle className='text-danger' />
+              <BiSolidCircle className='text-warning' />
+              <BiSolidCircle className='text-success' />
+            </Col>
+            <Col className=' d-flex justify-content-end'>
+              <BiCopy
+                onClick={() => {
+                  navigator.clipboard.writeText(value);
+                  toast.success("copied to clipboard");
+                }} className='text-light mt-2' /></Col>
 
-        </Row>
-        <Row className=' p-2 mb-2'>
-          <textarea
-            className='rounded'
-            value={value}
-            placeholder='Enter Content here'
-            onChange={(e) => setvalue(e.target.value)}
-            rows={12}
-          />
+          </Row>
+          <Row className='w-100 mb-2'>
+            <textarea
+              className='w-100 p-2 rounded'
+              value={value}
+              placeholder='Enter Content here'
+              onChange={(e) => setvalue(e.target.value)}
+              rows={15}
+            />
+          </Row>
         </Row>
       </Row>
     </Container>

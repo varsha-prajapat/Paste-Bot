@@ -13,16 +13,16 @@ const Favourite = () => {
   }
   return (
     <Container
-      className='vw-100 vh-100  p-2 mt-2 d-flex flex-column align-items-center'>
+      className='vw-100  p-2 mt-4 d-flex flex-column align-items-center'>
       {fav.length > 0 &&
         fav.map((favs) =>
           <Row
-            className=' w-50 m-2 mb-4 p-2  rounded bg-danger bg-opacity-25  border border-danger'
+            className=' w-100 m-2 mb-4 p-2  rounded bg-danger bg-opacity-25  border border-danger'
             key={favs._id}>
             <Col>
               <h6 className='text-light'> {favs.title}</h6>
             </Col>
-            <Col className=' d-flex justify-content-end '>
+            <Col className='text-light  d-flex justify-content-end '>
               <FaEye onClick={() => View(favs._id)} size={25} />
             </Col>
           </Row>)

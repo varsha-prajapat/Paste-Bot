@@ -27,7 +27,7 @@ const Paste = () => {
   }
   return (
     <Container
-      className='vw-100 vh-100  d-flex  flex-column align-items-center mt-4'>
+      className='vw-100 mb-2  d-flex  flex-column align-items-center mt-4'>
       <Row className='w-100 ps-3 pe-3 '>
         <Col className='p-0 m-2 d-flex '>
           <input type="search"
@@ -37,8 +37,10 @@ const Paste = () => {
             onChange={(e) => setsearchTerm(e.target.value)}
           />
           <button onClick={() => dispatch(resetAllPaste())}
-            className=' d-flex justify-content-center align-items-center  bg-danger rounded  text-light inline'>
-            <BiReset size={20} />Reset</button>
+            className=' btn btn-danger d-flex justify-content-center align-items-center rounded  text-light'>
+            <BiReset size={20} />
+            Reset
+          </button>
         </Col>
       </Row>
       <div className=' w-100 mt-1 p-2'>

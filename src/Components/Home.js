@@ -44,7 +44,7 @@ const Home = () => {
 
   }
   return (
-    <Container className=' vw-100  vh-100  d-flex flex-column align-items-center'>
+    <Container className=' vw-50 mt-4 mb-2  d-flex flex-column align-items-center'>
       <Row className=' w-100 mt-2 mb-2 ' >
         <Col className='w-100 p-0  mb-2   d-flex  justify-content-between '>
           <input

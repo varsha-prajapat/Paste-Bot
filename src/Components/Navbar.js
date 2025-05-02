@@ -1,24 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import P from '../image/p.png';
 import { Container, Navbar, Nav } from 'react-bootstrap';
+import { TfiAlignRight, TfiClose } from 'react-icons/tfi';
+import { TifiClose } from 'react-icons/tfi';
 
 const Navbars = () => {
+  const [openmenu, setmenu] = useState(false);
   return (
     <Container fluid
-      className='vw-100   d-flex justify-content-center '>
+      className='vw-100 p-0 mb-2  d-flex justify-content-center '>
       <Navbar
-        className=' w-50 mt-4  rounded  d-flex justify-content-center' bg="dark" variant="dark" expand="md">
+        className="w-100 mt-0 d-flex justify-content-center bg-warning"
+        bg="dark" variant="dark" expand="md">
         <Container
-          className=' p-0 text-light  d-flex mt-3 bg-dark  '>
+          className=' text-light  d-flex mt-3 bg-dark  '>
           <Navbar.Brand>
             <div className='text-light d-flex ms-1 '>
               <img src={P} height={30} width={30} alt="icon" />
               <h5>Paste-Bot</h5>
             </div>
           </Navbar.Brand>
-          <Navbar.Toggle className='mb-2 me-1' aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Toggle onClick={() => setmenu(!openmenu)} className='mb-2 ' id="toggle">
+            {openmenu ? <TfiClose /> : <TfiAlignRight />}
+          </Navbar.Toggle>
+          <Navbar.Collapse >
             <Nav
               className="p-1 w-50 ms-auto  d-flex justify-content-evenly">
               <Nav.Item>

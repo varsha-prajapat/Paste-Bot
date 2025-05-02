@@ -11,20 +11,19 @@ const ViewPaste = () => {
   const paste = allPastes.filter((p) => p._id === id)[0];
   return (
     <Container
-      className=' vw-100 vh-100  d-flex flex-column align-items-center'>
-      <Row className=' w-50  m-1 ' >
-        <Col className='p-0'>
+      className=' vw-50  mt-4  d-flex flex-column align-items-center'>
+      <Row className=' w-100  mt-2' >
+        <Col className='p-0 '>
           <input
-            className=' bg-light w-100 p-1 mt-2 rounded  '
+            className=' bg-light w-100 p-1 rounded border border-dark '
             type="text"
-            placeholder='Enter title here...'
             value={paste.title}
             disabled
           />
         </Col>
       </Row>
       <Row
-        className=' w-50 bg-dark  d-flex justify-content-center rounded m-2  '>
+        className=' w-100 bg-dark  d-flex justify-content-center rounded m-2  '>
         <Row className=' w-100 rounded '>
           <Col>
             <BiSolidCircle className='text-danger' />
@@ -43,8 +42,7 @@ const ViewPaste = () => {
           <textarea
             className='bg-light rounded'
             value={paste.content}
-            placeholder='Enter Content here'
-            rows={12}
+            rows={15}
             disabled
 
           />

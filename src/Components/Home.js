@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToPaste, updateToPaste } from '../Store/PasteSlice';
-import { BiSolidCircle, BiCopy } from 'react-icons/bi';
+import { BiCopy } from 'react-icons/bi';
 import toast from 'react-hot-toast';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -65,19 +65,14 @@ const Home = () => {
         </Col>
       </Row>
       <Row className=' w-100  bg-dark  d-flex justify-content-center rounded '>
-        <Row className='w-100 p-2 m-0 d-flex justify-content-center '>
+        <Row className='w-100 p-0 m-0 d-flex justify-content-center '>
           <Row className=' rounded '>
-            <Col>
-              <BiSolidCircle className='text-danger' />
-              <BiSolidCircle className='text-warning' />
-              <BiSolidCircle className='text-success' />
-            </Col>
-            <Col className=' d-flex justify-content-end'>
+            <Col className='d-flex justify-content-end'>
               <BiCopy
                 onClick={() => {
                   navigator.clipboard.writeText(value);
                   toast.success("copied to clipboard");
-                }} className='text-light mt-2' /></Col>
+                }} className='text-light mb-2 ' /></Col>
 
           </Row>
           <Row className='w-100 mb-2'>

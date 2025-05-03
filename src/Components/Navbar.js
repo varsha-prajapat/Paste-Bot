@@ -12,44 +12,38 @@ const Navbars = () => {
       className='vw-100 p-0 mb-2  d-flex justify-content-center '>
       <Navbar
         className="w-100 mt-0 d-flex justify-content-center bg-warning"
-        bg="dark" variant="dark" expand="md">
-        <Container
-          className=' text-light  d-flex mt-3 bg-dark  '>
+        bg="dark" variant="dark" expand="sm">
+        <Container fluid
+          className='w-100 text-light  d-flex  mt-3 bg-dark  '>
           <Navbar.Brand>
-            <div className='text-light d-flex ms-1 '>
+            <div className=' text-light d-flex ms-1 '>
               <img src={P} height={30} width={30} alt="icon" />
               <h5>Paste-Bot</h5>
             </div>
           </Navbar.Brand>
-          <Navbar.Toggle onClick={() => setmenu(!openmenu)} className='mb-2 ' id="toggle">
-            {openmenu ? <TfiClose /> : <TfiAlignRight />}
-          </Navbar.Toggle>
-          <Navbar.Collapse >
-            <Nav
-              className="p-1 w-50 ms-auto  d-flex justify-content-evenly">
-              <Nav.Item>
-                <NavLink to='/'
-                  className={({ isActive }) =>
-                    isActive ? "text-decoration-none text-secondary " : "text-decoration-none text-light"}>
-                  Home
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink to='/pastes'
-                  className={({ isActive }) =>
-                    isActive ? "text-decoration-none  text-secondary" : "text-decoration-none text-light"}>
-                  ALL
-                </NavLink>
-              </Nav.Item>
-              <Nav.Item>
-                <NavLink to='/favourite'
-                  className={({ isActive }) =>
-                    isActive ? "text-decoration-none text-secondary" : "text-decoration-none text-light"}>
-                  Fav
-                </NavLink>
-              </Nav.Item>
-            </Nav>
-          </Navbar.Collapse>
+          <Nav className="p-1 mb-2  w-50 align-self-end d-flex flex-row  justify-content-evenly">
+            <Nav.Item>
+              <NavLink to='/'
+                className={({ isActive }) =>
+                  isActive ? "text-decoration-none text-secondary " : "text-decoration-none text-light"}>
+                Home
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink to='/pastes'
+                className={({ isActive }) =>
+                  isActive ? "text-decoration-none  text-secondary" : "text-decoration-none text-light"}>
+                ALL
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink to='/favourite'
+                className={({ isActive }) =>
+                  isActive ? "text-decoration-none text-secondary" : "text-decoration-none text-light"}>
+                Fav
+              </NavLink>
+            </Nav.Item>
+          </Nav>
         </Container>
       </Navbar>
     </Container>

@@ -1,6 +1,6 @@
 # PASTE-BOT :blue_book:
 
-This Project is for creating small notes.It also provide feature like edit ,update ,delete ,favourites ,whatsApp,reset ,veiw.This Project use localstorage to store data.
+This Project is for creating small notes.It also provide feature like edit, update, delete, favourites, whatsApp, reset, view.This Project use localstorage to store data.
 
 ## Table of Contents
 - About

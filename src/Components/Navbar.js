@@ -14,14 +14,14 @@ const Navbars = () => {
         className="w-100 mt-0 d-flex justify-content-center bg-warning"
         bg="dark" variant="dark" expand="sm">
         <Container fluid
-          className='w-100 text-light  d-flex  mt-3 bg-dark  '>
+          className='w-100 bg-primary  text-light  d-flex  mt-3 bg-dark  '>
           <Navbar.Brand>
             <div className=' text-light d-flex ms-1 '>
               <img src={P} height={30} width={30} alt="icon" />
               <h5>Paste-Bot</h5>
             </div>
           </Navbar.Brand>
-          <Nav className="p-1 mb-2  w-50 align-self-end d-flex flex-row  justify-content-evenly">
+          <Nav className="p-1 mb-2  w-50 align-self-end d-flex flex-row  justify-content-between">
             <Nav.Item>
               <NavLink to='/'
                 className={({ isActive }) =>

@@ -72,7 +72,7 @@ const Home = () => {
                 onClick={() => {
                   navigator.clipboard.writeText(value);
                   toast.success("copied to clipboard");
-                }} className='text-light mb-2 ' /></Col>
+                }} className='text-light mb-1 mt-1' /></Col>
 
           </Row>
           <Row className='w-100 mb-2'>

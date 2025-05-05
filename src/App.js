@@ -6,6 +6,7 @@ import Paste from './Components/Paste';
 import Favourite from "./Components/Favourite";
 import { Container } from "react-bootstrap";
 import NoFound from "./Components/NoFound";
+import Footers from "./Components/Footer";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       <div>
         <Navbars />
         <Home />
+        <Footers />
       </div>
   },
   {
@@ -22,6 +24,7 @@ const router = createBrowserRouter([
       <div>
         <Navbars />
         <Paste />
+        <Footers />
       </div>
   },
   {
@@ -30,6 +33,7 @@ const router = createBrowserRouter([
       <div>
         <Navbars />
         <ViewPaste />
+        <Footers />
       </div>
   },
   {
@@ -38,6 +42,7 @@ const router = createBrowserRouter([
       <div>
         <Navbars />
         <Favourite />
+        <Footers />
       </div>
   },
   {

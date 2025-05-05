@@ -19,8 +19,8 @@ const Navbars = () => {
           className='text-light  d-flex '>
           <Navbar.Brand>
             <div className='d-flex ms-1 '>
-              <img src={P} height={30} width={30} alt="icon" />
-              <h5>Paste-Bot</h5>
+              <img src={P} height={33} width={35} alt="icon" />
+              <h3>Paste-Bot</h3>
             </div>
           </Navbar.Brand>
           {windows > 500 && <NavLinks />}

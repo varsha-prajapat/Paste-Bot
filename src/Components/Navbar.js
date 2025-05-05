@@ -15,15 +15,15 @@ const Navbars = () => {
       <Navbar
         className="w-100  d-flex justify-content-center"
         bg="dark" variant="dark" expand="sm">
-        <Container fluid
-          className='vw-100  text-light  d-flex '>
+        <Container
+          className='text-light  d-flex '>
           <Navbar.Brand>
             <div className='d-flex ms-1 '>
               <img src={P} height={30} width={30} alt="icon" />
               <h5>Paste-Bot</h5>
             </div>
           </Navbar.Brand>
-          {windows > 337 && <NavLinks />}
+          {windows > 500 && <NavLinks />}
         </Container>
       </Navbar>
     </Container>

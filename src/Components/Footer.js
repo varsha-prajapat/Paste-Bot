@@ -12,7 +12,7 @@ const Footers = () => {
   return (
     <footer fixed="bottom" className="positon-relative p-0 m-0">
       {
-        windows <= 337 && <Container fluid
+        windows <= 500 && <Container fluid
           className="w-100  gap-4  p-2 position-absolute bottom-0 bg-dark d-flex flex-row justify-content-center">
           <NavLink to='/'
             className={({ isActive }) =>

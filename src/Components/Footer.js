@@ -10,33 +10,34 @@ const Footers = () => {
   }
   window.addEventListener("resize", () => handle())
   return (
-    <footer fixed="bottom" className="positon-relative p-0 m-0">
+    <footer className="footer fixed-bottom p-0 m-0 ">
       {
         windows <= 500 && <Container fluid
-          className="w-100  gap-4  p-2 position-absolute bottom-0 bg-dark d-flex flex-row justify-content-center">
+          className="w-100 p-2 bg-dark d-flex flex-row justify-content-around">
           <NavLink to='/'
             className={({ isActive }) =>
               isActive ?
-                " p-1 m-1 d-flex flex-row  text-decoration-none text-dark bg-light  rounded "
+                " p-2 m-1 d-flex flex-row  text-decoration-none text-dark bg-light  rounded-pill"
                 :
-                "p-1 m-1 d-flex flex-row   text-decoration-none text-light"}>
+                "p-2 m-1 d-flex flex-row   text-decoration-none text-light"}>
             <BiSolidHomeAlt2 size={20} />
             Home
           </NavLink>
           <NavLink to='/pastes'
             className={({ isActive }) =>
               isActive ?
-                " p-1 m-1 d-flex flex-row text-decoration-none  bg-light text-dark rounded"
+                " p-2 m-1 d-flex flex-row text-decoration-none  bg-light text-dark rounded-pill"
                 :
-                "p-1 m-1   d-flex flex-row text-decoration-none text-light"}>
+                "p-2 m-1   d-flex flex-row text-decoration-none text-light"}>
             <BiClipboard size={20} />
             ALL
           </NavLink>
           <NavLink to='/favourite'
             className={({ isActive }) =>
-              isActive ? " p-1 m-1 d-flex flex-row text-decoration-none text-dark bg-light  rounded "
+              isActive ?
+                " p-2 m-1 d-flex flex-row text-decoration-none text-dark bg-light  rounded-pill "
                 :
-                "p-1 m-1 d-flex flex-row  text-decoration-none text-light"}>
+                "p-2 m-1 d-flex flex-row  text-decoration-none text-light"}>
             <BiSolidStar size={20} />
             Fav
           </NavLink>

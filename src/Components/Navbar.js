@@ -13,14 +13,14 @@ const Navbars = () => {
     <Container fluid
       className='vw-100 p-0 mt-0  d-flex  justify-content-center '>
       <Navbar
-        className="w-100  d-flex justify-content-center"
-        bg="dark" variant="dark" expand="sm">
+        className="w-100 d-flex justify-content-center"
+        bg="dark" variant="dark">
         <Container
-          className='text-light  d-flex '>
+          className={windows > 500 ? 'text-light  d-flex flex-row' : 'text-light  d-flex flex-row justify-content-center'}>
           <Navbar.Brand>
-            <div className='d-flex ms-1 '>
-              <img src={P} height={33} width={35} alt="icon" />
-              <h3>Paste-Bot</h3>
+            <div className='p-1 d-flex flex-row   ms-1  '>
+              <img src={P} height={35} width={25} alt="icon" />
+              <h2>Paste-Bot</h2>
             </div>
           </Navbar.Brand>
           {windows > 500 && <NavLinks />}

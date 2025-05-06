@@ -25,17 +25,12 @@ const ViewPaste = () => {
       <Row
         className=' w-100 bg-dark  d-flex justify-content-center rounded m-2  '>
         <Row className=' w-100 rounded '>
-          <Col>
-            <BiSolidCircle className='text-danger' />
-            <BiSolidCircle className='text-warning' />
-            <BiSolidCircle className='text-success' />
-          </Col>
           <Col className=' d-flex justify-content-end'>
             <BiCopy
               onClick={() => {
                 navigator.clipboard.writeText(paste.content);
                 toast.success("copied to clipboard");
-              }} className='text-light mt-2' /></Col>
+              }} className='text-light mt-1 mb-1' /></Col>
 
         </Row>
         <Row className=' p-2 mb-2'>

@@ -30,7 +30,7 @@ const ViewPaste = () => {
               onClick={() => {
                 navigator.clipboard.writeText(paste.content);
                 toast.success("copied to clipboard");
-              }} className='text-light mt-1 mb-1' /></Col>
+              }} className='text-light ' /></Col>
 
         </Row>
         <Row className=' p-2 mb-2'>

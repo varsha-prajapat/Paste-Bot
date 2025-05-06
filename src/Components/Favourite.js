@@ -13,11 +13,11 @@ const Favourite = () => {
   }
   return (
     <Container
-      className='vw-100  p-2 mt-4 d-flex flex-column align-items-center'>
+      className='vw-100  p-3 mt-3 mb-4  d-flex flex-column align-items-center'>
       {fav.length > 0 &&
         fav.map((favs) =>
           <Row
-            className=' w-100 m-2 mb-4 p-2  rounded bg-danger bg-opacity-25  border border-danger'
+            className=' w-100 m-2  p-2  rounded bg-danger bg-opacity-25  border border-danger'
             key={favs._id}>
             <Col>
               <h6 className='text-light'> {favs.title}</h6>

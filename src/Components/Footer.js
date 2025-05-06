@@ -10,10 +10,10 @@ const Footers = () => {
   }
   window.addEventListener("resize", () => handle())
   return (
-    <footer className="footer fixed-bottom p-0 m-0 ">
+    <footer className="m-0 p-0 footer fixed-bottom  ">
       {
         windows <= 500 && <Container fluid
-          className="w-100 p-2 bg-dark d-flex flex-row justify-content-around">
+          className="w-100 p-1 bg-dark d-flex flex-row justify-content-around">
           <NavLink to='/'
             className={({ isActive }) =>
               isActive ?

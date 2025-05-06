@@ -27,7 +27,7 @@ const Paste = () => {
   }
   return (
     <Container
-      className='vw-100 mb-2  d-flex  flex-column align-items-center mt-4'>
+      className='vw-100 p-4 mb-4 d-flex  flex-column align-items-center mt-3'>
       <Row className='w-100 ps-3 pe-3 '>
         <Col className='p-0 m-2 d-flex '>
           <input type="search"
@@ -49,7 +49,7 @@ const Paste = () => {
           filteredData.map(
             (paste) =>
               <Row
-                className='vw-50  m-3 p-2  d-flex  bg-primary bg-opacity-25 rounded '
+                className='vw-50  m-3 mb-4 p-2  d-flex  bg-primary bg-opacity-25 rounded '
                 key={paste._id}>
                 <Col className='text-light'>
                   <h3 >

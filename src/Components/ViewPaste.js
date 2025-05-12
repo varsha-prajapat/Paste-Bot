@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { BiSolidCircle, BiCopy } from 'react-icons/bi';
+import { BiCopy } from 'react-icons/bi';
 import { Container, Row, Col } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 
@@ -12,10 +12,10 @@ const ViewPaste = () => {
   return (
     <Container
       className=' vw-50  mt-4  d-flex flex-column align-items-center'>
-      <Row className=' w-100  mt-2' >
-        <Col className='p-0 '>
+      <Row className=' w-100  mt-2 ' >
+        <Col className='p-0'>
           <input
-            className=' bg-light w-100 p-1 rounded border border-dark '
+            className='w-100 p-1 bg-light rounded border border-dark '
             type="text"
             value={paste.title}
             disabled
@@ -23,9 +23,9 @@ const ViewPaste = () => {
         </Col>
       </Row>
       <Row
-        className=' w-100 bg-dark  d-flex justify-content-center rounded m-2  '>
-        <Row className=' w-100 rounded '>
-          <Col className=' d-flex justify-content-end'>
+        className=' w-100 m-2 bg-dark  d-flex justify-content-center rounded'>
+        <Row >
+          <Col className='p-0 m-0 d-flex justify-content-end'>
             <BiCopy
               onClick={() => {
                 navigator.clipboard.writeText(paste.content);

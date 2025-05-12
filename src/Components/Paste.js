@@ -27,7 +27,7 @@ const Paste = () => {
   }
   return (
     <Container
-      className='vw-100 p-3 mb-4 d-flex  flex-column align-items-center mt-3'>
+      className='vw-100 p-3 mb-4 d-flex  flex-column align-items-center '>
       <Row className='w-100 ps-3 pe-3 '>
         <Col className='p-0 m-2 d-flex '>
           <input type="search"

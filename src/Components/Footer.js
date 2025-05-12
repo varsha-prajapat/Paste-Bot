@@ -3,16 +3,18 @@ import { NavLink } from "react-router-dom";
 import { BiSolidHomeAlt2, BiClipboard, BiSolidStar } from 'react-icons/bi';
 import { Container } from "react-bootstrap";
 
-const Footers = () => {
-  const [windows, setwindow] = useState(window.innerWidth);
+const Footer = () => {
+  const [wd, setwd] = useState(window.innerWidth);
   const handle = () => {
-    setwindow(window.innerWidth)
+    setwd(window.innerWidth)
   }
   window.addEventListener("resize", () => handle())
   return (
     <footer className="m-0 p-0 footer fixed-bottom  ">
       {
-        windows <= 500 && <Container fluid
+        wd <= 500
+        &&
+        <Container fluid
           className="w-100 p-1 bg-dark d-flex flex-row justify-content-around">
           <NavLink to='/'
             className={({ isActive }) =>
@@ -46,4 +48,4 @@ const Footers = () => {
     </footer>
   );
 }
-export default Footers
+export default Footer

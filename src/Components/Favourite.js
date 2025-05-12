@@ -9,7 +9,7 @@ const Favourite = () => {
   const fav = pastes.filter((paste) => paste.fav === true);
   const nav = useNavigate();
   function View(id) {
-    nav(`/pastes/${id}`)
+    nav(`/favourite/${id}`)
   }
   return (
     <Container
@@ -30,7 +30,7 @@ const Favourite = () => {
       {
         fav.length === 0 &&
         <h2
-          className=' w-50  p-2  text-light text-center rounded bg-danger bg-opacity-25   border border-danger' >
+          className=' w-50  p-2 text-light text-center rounded bg-danger bg-opacity-25 border border-danger' >
           No Favourites</h2>
       }
     </Container>

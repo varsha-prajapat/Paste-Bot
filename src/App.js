@@ -1,48 +1,57 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ViewPaste from "./Components/ViewPaste";
-import Navbars from './Components/Navbar';
+import Nav from './Components/Navbar';
 import Home from './Components/Home';
 import Paste from './Components/Paste';
 import Favourite from "./Components/Favourite";
 import { Container } from "react-bootstrap";
 import NoFound from "./Components/NoFound";
-import Footers from "./Components/Footer";
+import Footer from "./Components/Footer";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element:
       <div>
-        <Navbars />
+        <Nav />
         <Home />
-        <Footers />
+        <Footer />
       </div>
   },
   {
     path: "/pastes",
     element:
       <div>
-        <Navbars />
+        <Nav />
         <Paste />
-        <Footers />
+        <Footer />
       </div>
   },
   {
     path: "/pastes/:id",
     element:
       <div>
-        <Navbars />
+        <Nav />
         <ViewPaste />
-        <Footers />
+        <Footer />
       </div>
   },
   {
     path: "/favourite",
     element:
       <div>
-        <Navbars />
+        <Nav />
         <Favourite />
-        <Footers />
+        <Footer />
+      </div>
+  },
+  {
+    path: "/favourite/:id",
+    element:
+      <div>
+        <Nav />
+        <ViewPaste />
+        <Footer />
       </div>
   },
   {
@@ -54,7 +63,7 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-    <Container className="vw-100 m-0 p-0  d-flex jusitfy-content-center">
+    <Container className="vw-100 m-0 p-0 d-flex jusitfy-content-center">
       <RouterProvider router={router} />
     </Container>
   );

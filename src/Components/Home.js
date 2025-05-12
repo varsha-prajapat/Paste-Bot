@@ -35,6 +35,7 @@ const Home = () => {
 
     }
     else {
+      //add
       dispatch(addToPaste(paste));
 
     }
@@ -44,9 +45,9 @@ const Home = () => {
 
   }
   return (
-    <Container className=' vw-50 mt-4 mb-2  d-flex flex-column align-items-center'>
+    <Container className=' vw-50 mt-4 mb-2 d-flex flex-column align-items-center'>
       <Row className=' w-100 mt-2 mb-2 ' >
-        <Col className='w-100 p-0  mb-2   d-flex  justify-content-between '>
+        <Col className='w-100 p-0  mb-2 d-flex justify-content-between '>
           <input
             className=' w-50 p-1 me-2 rounded  '
             type="text"
@@ -66,15 +67,13 @@ const Home = () => {
       </Row>
       <Row className=' w-100  bg-dark  d-flex justify-content-center rounded '>
         <Row className='w-100 p-0 m-0 d-flex justify-content-center '>
-          <Row className=' rounded '>
-            <Col className='d-flex justify-content-end'>
-              <BiCopy
-                onClick={() => {
-                  navigator.clipboard.writeText(value);
-                  toast.success("copied to clipboard");
-                }} className='text-light mb-1 mt-1' /></Col>
-
-          </Row>
+          <Col className='d-flex justify-content-end'>
+            <BiCopy
+              onClick={() => {
+                navigator.clipboard.writeText(value);
+                toast.success("copied to clipboard");
+              }} className='text-light mb-1 mt-1' />
+          </Col>
           <Row className='w-100 mb-2'>
             <textarea
               className='w-100 p-2 rounded'

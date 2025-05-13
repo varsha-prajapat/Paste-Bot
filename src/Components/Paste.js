@@ -6,6 +6,7 @@ import { FaStar, FaEdit } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 import { BiFile, BiTrash, BiCalendar, BiCopy, BiReset, BiLogoWhatsapp } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
+import { ImSad2 } from "react-icons/im";
 
 const Paste = () => {
   const pastes = useSelector((state) => state.paste_bot.paste_bot);
@@ -85,13 +86,23 @@ const Paste = () => {
           )
         }
       </div>
-      {
+      { //No search result Found
         filteredData.length === 0 && searchTerm !== '' &&
         <h4 className='text-light'>
           Not Found
         </h4>
       }
-
+      {  //No Paste are there
+        filteredData.length === 0 && searchTerm === "" &&
+        <Row
+          className='w-50 p-1 text-light bg-primary bg-opacity-25 rounded'>
+          <h2
+            className=' w-100 gap-2 d-flex flex-row justify-content-center'>
+            No Paste
+            <ImSad2 className='text-warning' />
+          </h2>
+        </Row>
+      }
     </Container>
   )
 }

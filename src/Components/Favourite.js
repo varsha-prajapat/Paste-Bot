@@ -27,11 +27,12 @@ const Favourite = () => {
             </Col>
           </Row>)
       }
-      {
+      { //No Fovourites are there
         fav.length === 0 &&
         <h2
-          className=' w-50  p-2 text-light text-center rounded bg-danger bg-opacity-25 border border-danger' >
-          No Favourites</h2>
+          className=' w-50 m-3  p-2  text-light text-center rounded bg-danger bg-opacity-25 border border-danger' >
+          No Favourites
+        </h2>
       }
     </Container>
   )
